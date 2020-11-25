@@ -1,0 +1,62 @@
+@import "../../App.scss";
+
+.Card-wrapper {
+	margin-bottom: 4rem;
+	box-sizing: border-box;
+	display: flex;
+	width: 45.3rem;
+	border: 1px solid #d0d0d0;
+	border-radius: 0.5rem;
+	@media (max-width: 1045px) {
+		width: 100%;
+	}
+
+	.Card-imgBox {
+		width: 40%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 0.5rem 0rem 0rem 0.5rem;
+		}
+	}
+	.Card-textBox {
+		padding-left: 2.4rem;
+		background-color: $cardTextBackground;
+		width: 60%;
+		border-radius: 0rem 0.5rem 0.5rem 0rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-family: $font;
+		p {
+			font-size: $fontSizeCardp;
+			font-weight: $weightCardp;
+			margin: 0rem;
+		}
+		h3 {
+			margin-top: 0.8rem;
+			margin-bottom: 2.1rem;
+			font-size: $fontSizeCardh;
+			font-weight: $weightCardh;
+		}
+		.Card-priceDiscount {
+			background-color: $priceDiscountBackground;
+			padding: 0.4rem;
+			border-radius: 0.3rem;
+			color: $priceColorText;
+			font-family: $font;
+			font-style: normal;
+			font-weight: bold;
+			font-size: $fontSizePrice;
+			line-height: 1.8rem;
+		}
+		.Card-price {
+			margin-right: 1.6rem;
+			color: $priceColorDisc;
+			font-size: $fontSizepriceDis;
+			font-weight: $weightPriceDis;
+			text-decoration: line-through;
+		}
+	}
+}

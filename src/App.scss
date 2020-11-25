@@ -1,0 +1,148 @@
+//variables
+$font: "Roboto", sans-serif;
+$weightp: 500;
+$weightH2: 600;
+$weightH4: 600;
+$fontSizeinput: 1.5rem;
+$fontSizep: 2rem;
+$fontSizeH2: 2.5rem;
+$fontSizeH4: 2.5rem;
+
+$headerBackground: #ffff;
+$cardTextBackground: #fafafa;
+$priceColorDisc: #777777;
+$inputColor: #777777;
+$priceColorText: #ffff;
+$priceDiscountBackground: #ff0000;
+$selectedProductsBackground: #e7e7e7;
+
+//Card
+$weightCardp: 500;
+$weightCardh: 600;
+$weightPriceDis: 700;
+$fontSizePrice: 1.5rem;
+$fontSizeCardp: 1.3rem;
+$fontSizeCardh: 1.7rem;
+$fontSizepriceDis: 1.3rem;
+
+:root {
+	font-size: 10px;
+	font-family: $font;
+
+	@media (max-width: 450px) {
+		font-size: 7px;
+	}
+}
+.App {
+	max-width: 192rem;
+}
+.App-header {
+	position: absolute;
+	width: 100%;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+	background-color: $headerBackground;
+	box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.15);
+	p {
+		font-family: $font;
+		font-weight: $weightp;
+		font-size: $fontSizep;
+		margin: 2.6rem 2.6rem 0rem 8rem;
+	}
+}
+
+.App-main {
+	width: 100%;
+	padding-top: 7.5rem;
+	@media (max-width: 450px) {
+		padding-top: 12rem;
+	}
+	h2 {
+		font-size: $fontSizeH2;
+		font-family: $font;
+		font-weight: $weightH2;
+	}
+	.Product-box {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 75%;
+		margin: 0 auto;
+	}
+	.App-main-category {
+		position: relative;
+		width: 75%;
+		margin: 0 auto;
+		.Svgg {
+			position: relative;
+			top: 3.5rem;
+			left: 1.5rem;
+			border: none;
+		}
+		div {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			.inputSearch {
+				width: 45.3rem;
+				height: 4.8rem;
+				border-radius: 0.5rem;
+				padding-left: 4.6rem;
+				margin-bottom: 3rem;
+				box-sizing: border-box;
+				color: $inputColor;
+				border: 0.1rem solid #777777;
+				font-size: $fontSizeinput;
+				@media (max-width: 1045px) {
+					width: 100%;
+				}
+			}
+			.selectSort {
+				width: 33rem;
+				color: $inputColor;
+				height: 4.8rem;
+				background: transparent white;
+				appearance: none;
+				overflow: hidden;
+				padding-right: 1rem;
+				box-sizing: border-box;
+				padding-left: 1.6rem;
+				border-radius: 0.5rem;
+				margin-bottom: 3rem;
+				border: 0.1rem solid #777777;
+				box-sizing: border-box;
+				font-size: $fontSizeinput;
+				background: url("../src/data/svg/arrow.svg") no-repeat right #fff;
+				background-position-x: 29.5rem;
+				@media (max-width: 1045px) {
+					width: 100%;
+					background-position-x: 97%;
+				}
+			}
+		}
+	}
+	.App-main-selectedProduct {
+		width: 75%;
+		background-color: $selectedProductsBackground;
+		margin: 0 auto;
+		margin-bottom: 4rem;
+		div {
+			h4 {
+				padding-top: 4rem;
+				margin-top: 0rem;
+				font-weight: $weightH4;
+				font-size: $fontSizeH4;
+				font-family: $font;
+				text-align: center;
+			}
+		}
+		.App-main-selectedProductBox {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-bottom: 2rem;
+		}
+	}
+}
